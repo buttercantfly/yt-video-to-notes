@@ -1,0 +1,7 @@
+yt-dlp
+openai-whisper
+google-generativeai
+python-dotenv
+# torch, torchvision, torchaudio 應該會作為 openai-whisper 的依賴被安裝
+# 如果你需要特定 CUDA 版本的 GPU 加速，建議參考 PyTorch 官網指引先行安裝：
+# https://pytorch.org/get-started/locally/
