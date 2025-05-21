@@ -112,15 +112,17 @@ def download_youtube_audio(video_url, desired_basename, output_directory="downlo
             # download_result_info 保持為 None
 
     except subprocess.CalledProcessError as e:
-        print(f"\n[Downloader] 下載時發生錯誤！")
-        if hasattr(e, 'stdout') and e.stdout:
-            print("--- yt-dlp 標準輸出 (錯誤時) ---")
-            for line in e.stdout.splitlines():
-                if "ERROR:" in line or "WARNING:" in line:
-                    print(line)
-        if hasattr(e, 'stderr') and e.stderr:
-            print("--- yt-dlp 詳細錯誤輸出 (錯誤時) ---")
-            print(e.stderr)
+        print(f"\n[Downloader] yt-dlp 執行失敗，返回碼 (Return Code): {e.returncode}")
+        print("--- yt-dlp STDOUT (原始標準輸出) ---")
+        if e.stdout:
+            print(e.stdout.strip()) # strip() 去除前後多餘空白或換行
+        else:
+            print(" (stdout 為空或未捕獲)")
+        print("--- yt-dlp STDERR (原始錯誤輸出) ---")
+        if e.stderr:
+            print(e.stderr.strip()) # strip() 去除前後多餘空白或換行
+        else:
+            print(" (stderr 為空或未捕獲)") # yt-dlp 的主要錯誤訊息通常在這裡
         return None # 確保錯誤時返回 None
     except FileNotFoundError:
         print("[Downloader] 錯誤：找不到 'yt-dlp' 命令。請確認 yt-dlp 已安裝並加入到系統 PATH。")

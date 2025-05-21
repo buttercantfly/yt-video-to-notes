@@ -2,6 +2,6 @@ yt-dlp
 openai-whisper
 google-generativeai
 python-dotenv
-# torch, torchvision, torchaudio 應該會作為 openai-whisper 的依賴被安裝
-# 如果你需要特定 CUDA 版本的 GPU 加速，建議參考 PyTorch 官網指引先行安裝：
-# https://pytorch.org/get-started/locally/
+# torch, torchvision, torchaudio sould be isntalled with openai-whisper's dependency
+# if you have NVIDIA GPU and look for CUDA GPU support, please look for certain command: https://pytorch.org/get-started/locally/
+# for me, on windows with RTX 2060, the command would be: pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu128
