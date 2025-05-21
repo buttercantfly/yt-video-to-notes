@@ -33,8 +33,8 @@
 1.  **取得專案檔案**：
     * 如果你是從 GitHub 複製 (clone) 本專案：
         ```bash
-        git clone <你的專案GitHub連結>
-        cd <專案資料夾名稱>
+        git clone https://github.com/buttercantfly/yt-video-to-notes.git
+        cd yt-video-to-notes
         ```
     * 或者，直接下載本專案的所有 `.py` 檔案 (`main.py`, `download_audio.py`, `transcriber.py`, `llm_processor.py`) 及 `requirements.txt` (內容如本文件開頭所示)，並將它們放在同一個資料夾中。
 
