@@ -105,19 +105,9 @@
     * 若設定了 `path_to_obsidian_workspace`，`.md` 筆記將被複製到該路徑。
 
 ## 專案檔案結構 (Project Structure)
-your_project_folder/
-├── .venv/                      # Python 虛擬環境
-├── .env                        # API 金鑰和路徑設定 (不加入 Git)
-├── .gitignore                  # Git 忽略設定
-├── main.py                     # 主執行腳本
-├── download_audio.py           # YouTube 下載模組
-├── transcriber.py              # 本地 Whisper 轉錄模組
-├── llm_processor.py            # Gemini API 互動模組
-├── requirements.txt            # Python 套件依賴
-└── downloads/                  # 預設輸出資料夾 (自動建立)
-     └── Your_Video_Basename/    # 各影片的專屬資料夾
-            ├── ... 輸出檔案
-            └── ...
+
+當執行上面的步驟後，專案的結構應該會如下圖所示：
+![image](https://github.com/user-attachments/assets/5d4c09ec-175d-4b35-80ba-cd0de650f9ab)
 
 ## 注意事項
 
