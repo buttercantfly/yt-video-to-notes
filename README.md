@@ -107,6 +107,7 @@
 ## 專案檔案結構 (Project Structure)
 
 當執行上面的步驟後，專案的結構應該會如下圖所示：
+
 ![image](https://github.com/user-attachments/assets/5d4c09ec-175d-4b35-80ba-cd0de650f9ab)
 
 ## 注意事項
