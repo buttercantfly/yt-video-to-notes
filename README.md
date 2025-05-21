@@ -2,23 +2,22 @@
 
 一個 Python 自動化腳本，能從 YouTube 下載影片、進行本地語音轉文字、使用 Google Gemini API 整理逐字稿，並將結果保存為文字檔和 Markdown 檔案。
 
-## ✨ 主要功能
+## 主要功能
 
 * **自動化流程**：一鍵完成從 YouTube 影片到結構化筆記的轉換。
-* **高品質音訊下載**：使用 `yt-dlp` 下載最佳音訊並轉為 MP3。
+* **Youtube 影片音訊下載**：使用 `yt-dlp` 下載最佳音訊並轉為 MP3。
 * **本地語音轉錄**：利用 `openai-whisper` 在本機進行高效準確的語音轉文字，保護隱私。
     * 支援 CPU 及 NVIDIA GPU 加速。
 * **智能內容整理**：透過 Google Gemini API，根據客製化提示詞 (Prompt) 對逐字稿進行摘要、重點提煉、大綱生成等。
 * **多格式輸出**：
     * 原始逐字稿 (句末優化換行) 存為 `.txt`。
     * Gemini 處理後的結構化內容存為 `.md` (Markdown)。
-* **Obsidian 整合 (可選)**：自動將生成的 Markdown 筆記複製到指定的 Obsidian Vault 資料夾。
 * **彈性設定**：
     * 可選擇是否保留原始影片檔案。
     * 可自訂輸出檔案和資料夾的基礎名稱。
     * 透過 `.env` 檔案安全管理 API 金鑰和路徑。
 
-## 📋 環境需求與事前準備 (Prerequisites)
+## 環境需求與事前準備 (Prerequisites)
 
 在開始之前，請確保你的系統已安裝以下軟體：
 
@@ -29,7 +28,7 @@
     * **Linux**: `sudo apt update && sudo apt install ffmpeg` (Debian/Ubuntu) 或 `sudo dnf install ffmpeg` (Fedora)。
     * 安裝後，在終端機執行 `ffmpeg -version` 檢查是否成功。
 
-## 🚀 安裝與設定 (Installation & Setup)
+## 安裝與設定 (Installation & Setup)
 
 1.  **取得專案檔案**：
     * 如果你是從 GitHub 複製 (clone) 本專案：
@@ -77,7 +76,7 @@
         .env
         ```
 
-## 💡 使用教學 (Usage)
+## 使用教學 (Usage)
 
 完成安裝與設定後，即可執行主腳本。
 
@@ -105,7 +104,7 @@
         * (可選) 影片檔 (如 `基礎名稱.mp4`)
     * 若設定了 `path_to_obsidian_workspace`，`.md` 筆記將被複製到該路徑。
 
-## 📂 專案檔案結構 (Project Structure)
+## 專案檔案結構 (Project Structure)
 your_project_folder/
 ├── .venv/                      # Python 虛擬環境
 ├── .env                        # API 金鑰和路徑設定 (不加入 Git)
@@ -120,7 +119,7 @@ your_project_folder/
             ├── ... 輸出檔案
             └── ...
 
-## ⚠️ 注意事項
+## 注意事項
 
 * **API 費用**: Google Gemini API 的使用可能產生費用。請參考 [Google AI Studio 定價頁面](https://ai.google.dev/pricing)了解免費額度和詳細費率。
 * **API 金鑰安全**: 務必妥善保管您的 `GOOGLE_API_KEY`。
